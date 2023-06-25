@@ -13,7 +13,6 @@ SOURCES += \
     gamecontrol.cpp \
     global.cpp \
     main.cpp \
-    mainwindow.cpp \
     mygameview.cpp \
     player.cpp
 
@@ -21,12 +20,10 @@ HEADERS += \
     arrow.h \
     gamecontrol.h \
     global.h \
-    mainwindow.h \
     mygameview.h \
     player.h
 
-FORMS += \
-    mainwindow.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
