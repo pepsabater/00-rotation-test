@@ -1,0 +1,15 @@
+
+
+You don't have to mess with the QPixmap, you can manipulate the QGraphicsPixmapItem returned by QGraphicsScene::addPixmap:
+
+QGraphicsPixmapItem *pixmap_item = scene.addPixmap(pix);
+
+To set the position, you can use QGraphicsItem::setPos.
+
+To set the rotation, first set the transform origin point with QGraphicsItem::setTransformOriginPoint,(this will set the point around which your item will be rotated) and then set the rotation with QGraphicsItem::setRotation:
+
+pixmap_item->setPos(50, 0);
+pixmap_item->setTransformOriginPoint(pixmap_item->boundingRect().center());
+pixmap_item->setRotation(90);
+
+You will have to set the correct values yourself, but this should lead you in the right way.
